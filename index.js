@@ -71,6 +71,7 @@ app.patch("/kitten/downvote", (req, res) => {
 });
 
 app.post("/kitten/comments", (req, res) => {
+  console.log(req.body)
   const comment = req.body.comment;
   kitten.comments = [...kitten.comments, comment];
   res.json({ comments: kitten.comments });
